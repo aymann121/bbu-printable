@@ -1,0 +1,58 @@
+// var left = 20;
+// var width = 130;
+// var top = 20;
+// var height = 130;
+// var yAxisWidth = 30;
+// var xAxisHeight = 30;
+// var tickSize = 5;
+
+
+// var chartLines: { type: string; x1: any; y1: any; x2: any; y2: any; }[] = [];
+// var chartText: { text: string; fontSize: number; relativePosition: { x: number; y: number; } | { x: number; y: number; }; }[] = [];
+// var chart = [{ stack: chartText }, { canvas: chartLines }];
+
+
+// function buildXAxis() {
+// 	var xTicks = [
+// 		{ t: '2016', x: 0, y: 0 },
+// 		{ t: '2017', x: 25, y: 0 },
+// 		{ t: '2018', x: 50, y: 0 },
+// 		{ t: '2019', x: 75, y: 0 },
+// 		{ t: '2020', x: 100, y: 0 }
+// 	];
+
+// 	chartLines.push(horizontalLine(left + yAxisWidth - 1, top + height - xAxisHeight, width - yAxisWidth + 1));
+
+// 	xTicks.forEach(function (tick) {
+// 		chartLines.push(verticalLine(left + yAxisWidth + tick.x - 0.5, top + height - xAxisHeight, tickSize));
+// 		chartText.push({ text: tick.t, fontSize: 8, relativePosition: { x: left + yAxisWidth + tick.x - 9, y: top + height - xAxisHeight + tickSize + 2 } });
+// 	});
+// }
+
+// function buildYAxis() {
+// 	var yTicks = [
+// 		{ t: '5', y: 0, x: 0 },
+// 		{ t: '4', y: 25, x: 0 },
+// 		{ t: '3', y: 50, x: 0 },
+// 		{ t: '2', y: 75, x: 0 },
+// 		{ t: '1', y: 100, x: 0 }
+// 	];
+
+// 	chartLines.push(verticalLine(left + yAxisWidth - 0.5, top - 0.5, height - xAxisHeight));
+
+// 	yTicks.forEach(function (tick) {
+// 		chartLines.push(horizontalLine(left + yAxisWidth - tickSize - 1, top + tick.y, tickSize));
+// 		chartText.push({ text: tick.t, fontSize: 8, relativePosition: { x: left + yAxisWidth - tickSize - 8, y: top + tick.y - 5 } });
+// 	});
+// }
+
+// function horizontalLine(x: number, y: number, length: number) {
+// 	return { type: 'line', x1: x, y1: y, x2: x + length, y2: y };
+// }
+
+// function verticalLine(x: number, y: number, height: number) {
+// 	return { type: 'line', x1: x, y1: y, x2: x, y2: y + height };
+// }
+
+// buildXAxis();
+// buildYAxis();
